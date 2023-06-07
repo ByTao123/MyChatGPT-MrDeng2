@@ -4,7 +4,7 @@ FROM python:3.8-alpine
 RUN mkdir /code
 
 # 将代码和项目依赖添加到code文件夹
-ADD ./* /code
+ADD ./ /code
 
 # 设置code文件夹是工作目录
 WORKDIR /code
