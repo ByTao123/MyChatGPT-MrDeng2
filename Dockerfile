@@ -1,5 +1,5 @@
 # python版本，可根据需求进行修改
-FROM python:3.8-alpine
+FROM python:3.10.2-alpine
 
 RUN mkdir /code
 
