@@ -8,6 +8,7 @@ from channel import channel_factory
 from common.log import logger
 from config import conf, load_config
 from plugins import *
+from mysql.AdDAO import AdDAO
 
 
 def sigterm_handler_wrap(_signo):
@@ -16,7 +17,7 @@ def sigterm_handler_wrap(_signo):
     def func(_signo, _stack_frame):
         logger.info("signal {} received, exiting...".format(_signo))
         conf().save_user_datas()
-        if callable(old_handler):  #  check old_handler
+        if callable(old_handler):  # check old_handler
             return old_handler(_signo, _stack_frame)
         sys.exit(0)
 
@@ -54,4 +55,5 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    #run()
+    print(AdDAO().get_ad("ChatGPT测试"))

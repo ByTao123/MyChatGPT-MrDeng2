@@ -16,3 +16,4 @@ wechaty~=0.10.7
 web.py~=0.62
 wechatpy~=1.8.18
 typing~=3.7.4.3
+DBUtils~=3.0.3
